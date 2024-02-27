@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import About from './components/About.jsx';
+import Donate from './components/Donate.jsx';
+import Navbar from './components/Navbar.jsx';
+import Thanks from './components/Thanks.jsx';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='bg-purple-600  fixed w-screen ' >
+        <Navbar />
+      </div>
+      
+        <div className='w-screen h-screen   flex justify-center items-center ' id='donate'>
+        <Donate/>
+        </div>
+        <div className='w-screen h-screen   flex justify-center items-center' id='about'>
+       <About/>
+        </div>
+        <div className='w-screen h-screen  flex justify-center items-center' id='thanks'>
+         <Thanks/>
+        </div>
+      
     </div>
   );
 }
